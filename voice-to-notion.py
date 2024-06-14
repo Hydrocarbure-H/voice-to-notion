@@ -137,6 +137,8 @@ def main(input_file):
     # Remove the temporary wav file
     os.remove("reccord.wav")
 
+    print("Done!")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
