@@ -133,7 +133,9 @@ def main(input_file):
 
     print("Adding to Notion...")
     response = add_to_notion(page_title, final_output)
-    print(response)
+    
+    # Remove the temporary wav file
+    os.remove("reccord.wav")
 
 
 if __name__ == "__main__":

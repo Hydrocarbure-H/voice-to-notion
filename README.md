@@ -37,6 +37,14 @@ NOTION_API_KEY=your_notion_api_key_here
 NOTION_DATABASE_ID=your_notion_database_id_here
 ```
 
+The notion database identifier will be found after following these steps:
+
+- Open your browser (you can not do these steps in your Notion App)
+
+- Create a new database (click on `+` in your workspace and scroll down until you found 'database')
+- Click on the newly created database
+- The database id is this **part** in the url : ww.notion.so/**xxxxxxxxxxxxxxxxxxx**?v=yyyyyyyyyyyyyyyyyyy
+
 ## Usage
 
 1. **Prepare your audio file**: Ensure you have an audio file that you want to transcribe and summarize.
