@@ -44,18 +44,12 @@ def call_openai_api(transcription_text):
         "messages": [
             {
                 "role": "user",
-                "content": (
-                    f"Voici la transcription d'une réunion entre plusieurs personnes, "
-                    "issue d'un enregistrement dictaphone. "
-                    "Fais un résumé de ce qu'il faut retenir avec les points "
-                    "important en gras, et une liste des actions à faire suite à cette réunion. "
-                    "Ces actions peuvent être des actions exprimées dans le texte ou des actions que tu suggères. "
-                    "Ta réponse ne doit contenir que le résultat attendu, pas de phrase de présentation ou de conclusion. "
-                    "Voici le texte : {transcription_text}"
-                ),
+                "content":f"Voici la transcription d'une réunion entre plusieurs personnes, issue d'un enregistrement dictaphone. Fais un résumé de ce qu'il faut retenir avec les points important en gras, et une liste des actions à faire suite à cette réunion. Ces actions peuvent être des actions exprimées dans le texte ou des actions que tu suggères. Ta réponse ne doit contenir que le résultat attendu, pas de phrase de présentation ou de conclusion. Voici le texte : {transcription_text}"
+                ,
             }
         ],
     }
+
     response = requests.post(
         "https://api.openai.com/v1/chat/completions", headers=headers, json=data
     )
